@@ -6,7 +6,7 @@ This repository is a template for creating Python tools with a consistent struct
 
 - **Python Package Structure**: Includes a basic Python package setup (`python_tool_template`).
 - **Testing Setup**: Example test files (`python_tool_template_tests`) for unit testing.
-- **Development Tools**: Shell scripts to automate formatting, linting, and testing (`run_format.sh`, `run_lint.sh`, `run_tests.sh`).
+- **Development Tools**: Shell scripts to automate formatting, linting, testing (`run_format.sh`, `run_lint.sh`, `run_tests.sh`), and renaming (`rename.sh`).
 - **Project Configuration**: Uses `pyproject.toml` for dependency management with [Poetry](https://python-poetry.org/).
 
 ## Getting Started
@@ -15,6 +15,21 @@ This repository is a template for creating Python tools with a consistent struct
 
 - Python 3.8+
 - [Poetry](https://python-poetry.org/) for dependency management
+
+
+### Dependencies
+
+The project uses several dependencies defined in `pyproject.toml`. Below is a summary of the main dependencies and their purposes:
+
+- **[Poetry](https://python-poetry.org/)**: Used for dependency management and packaging.
+- **Linting and Formatting**: Includes tools like `pylint` and `black` to ensure code quality and consistency.
+- **Testing**: Uses `pytest` for unit testing to ensure the functionality of the code.
+
+To install the dependencies, use:
+
+```sh
+poetry install
+```
 
 ### Installation
 
@@ -41,24 +56,6 @@ poetry run python -m python_tool_template
 
 ### Development
 
-Find below the various shell scripts that were created for maintaining projects created from this project.
-
-#### Rename
-
-To rename the project from `python_project_template` to something of your choosing, run the following script.
-
-```sh
-./rename.sh <YOUR PROJECT NAME GOES HERE>
-```
-
-**Example:**
-
-```sh
-./rename.sh my_fancy_new_tool
-```
-
-**NOTE:** This will change both files that are in the generated project _and_ update the `pyproject.toml` file to reflect the name change.
-
 #### Formatting
 
 To format the codebase:
@@ -81,6 +78,14 @@ To run the tests:
 
 ```sh
 ./run_tests.sh
+```
+
+#### Renaming the Project
+
+To rename the project (e.g., change the package name from `python_tool_template` to something else):
+
+```sh
+./rename.sh new_project_name
 ```
 
 ### Project Structure
