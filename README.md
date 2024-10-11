@@ -31,6 +31,27 @@ To install the dependencies, use:
 poetry install
 ```
 
+### Project Dependencies
+
+This project relies on the following dependencies to ensure functionality, development efficiency, and maintainability:
+
+- **[rich](https://github.com/Textualize/rich)**: For rendering rich text, tables, and progress bars in the terminal, enhancing the user experience of the CLI.
+- **[rich-click](https://github.com/ewels/rich-click)**: Combines Rich and Click to add rich-text formatting and improve the usability of the command-line interface.
+- **[click](https://github.com/pallets/click)**: A framework for building flexible and easy-to-use command-line interfaces (CLI).
+
+### Development & Testing Dependencies
+
+- **[black](https://github.com/psf/black)**: Automatically formats code to ensure consistent style across the project.
+- **[pylint](https://github.com/PyCQA/pylint)**: Provides static code analysis to enforce coding standards and detect potential bugs.
+- **[coverage](https://github.com/nedbat/coveragepy)**: Measures the coverage of unit tests, helping to ensure all code paths are tested.
+
+### Documentation Dependencies
+
+- **[sphinx](https://www.sphinx-doc.org/)**: Generates project documentation in formats such as HTML and PDF.
+- **[sphinx-rtd-theme](https://github.com/readthedocs/sphinx_rtd_theme)**: Provides a clean, responsive theme for documentation, styled like Read the Docs.
+
+These dependencies help streamline development, testing, and documentation while ensuring a user-friendly command-line interface.
+
 ### Installation
 
 1. Clone the repository:

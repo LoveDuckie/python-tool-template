@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 <<EOF
 
-   Python Tool Template \ Shared \ Functions
+   Shell Scripts \ Shared Functions
 
-   A collection of shared and reusable functions for performing operations
+   A collection of shared and reusable functions.
 
 EOF
-CURRENT_SCRIPT_DIRECTORY=${CURRENT_SCRIPT_DIRECTORY:-$(dirname $(realpath $0))}
-export CURRENT_SCRIPT_FILENAME=${CURRENT_SCRIPT_FILENAME:-$(basename $0)}
+CURRENT_SCRIPT_DIRECTORY=${CURRENT_SCRIPT_DIRECTORY:-$(dirname $(realpath ${BASH_SOURCE[0]:-${(%):-%x}}))}
+export CURRENT_SCRIPT_FILENAME=${CURRENT_SCRIPT_FILENAME:-$(basename ${BASH_SOURCE[0]:-${(%):-%x}})}
 export CURRENT_SCRIPT_FILENAME_BASE=${CURRENT_SCRIPT_FILENAME%.*}
 export PROJECT_NAME="python_tool_template"
 
