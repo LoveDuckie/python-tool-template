@@ -9,7 +9,11 @@ def cli(context: click.Context) -> None:
     :param context:
     :return:
     """
-    pass
+    if not context:
+        raise ValueError("The click context is invalid.")
+
+    context.ensure_object(dict)
+    context.exit(0)
 
 
 if __name__ == "__main__":

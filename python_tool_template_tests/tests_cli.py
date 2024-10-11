@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 import click
 from click.testing import CliRunner
-from python_tool_template import cli
+from python_tool_template.__main__ import cli
 
 
 class TestsCli(unittest.TestCase):

@@ -27,13 +27,13 @@ if [ -z "$1" ]; then
 fi
 
 # Run the unit tests with coverage
-coverage run --source=. -m unittest discover -s $1
+poetry run coverage run --source=. -m unittest discover -s $1
 
 # Check if the tests passed
 if [ $? -eq 0 ]; then
   write_info "run_tests" "Unit tests passed."
 else
-  write_info "run_tests" "Some unit tests failed. Please review the errors."
+  write_error "run_tests" "Some unit tests failed. Please review the errors."
   exit 1
 fi
 

@@ -8,8 +8,8 @@ from logging.handlers import RotatingFileHandler
 
 from rich.logging import RichHandler
 
-from github_stars_export.helpers.helpers_datetime import get_time_formatted
-from github_stars_export import __project__
+from python_tool_template.helpers.helpers_datetime import get_time_formatted
+from python_tool_template import __project__
 
 
 def get_default_log_filename() -> str:
