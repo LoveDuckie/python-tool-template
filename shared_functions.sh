@@ -21,6 +21,14 @@ unset -f write_response
 unset -f write_success
 unset -f is_command_available
 
+is_macos() {
+  if [[ "$(uname)" == "Darwin" ]]; then
+    return 0  # True - running on macOS
+  else
+    return 1  # False - not running on macOS
+  fi
+}
+
 is_command_available() {
    if [[ "$(command -v $1)" != "" ]] && [[ "$(type -t $1)" != "" ]]; then
       return 0

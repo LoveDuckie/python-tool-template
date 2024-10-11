@@ -14,7 +14,7 @@ This repository is a template for creating Python tools with a consistent struct
 ### Prerequisites
 
 - Python 3.8+
-- [Poetry](https://python-poetry.org/) for dependency management
+- [Poetry](https://python-poetry.org/) for dependency and project management
 
 
 ### Dependencies
